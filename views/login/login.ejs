@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Random Login Form</title>
+
+
+<link rel="stylesheet" href="../assets/styles/login/styles.css">
+	  <!-- Default scripts-->
+<script src="https://code.jquery.com/jquery-1.10.0.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/core/libraries/bootstrap.min.js"></script>
+<!-- Defailt scripts-->
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+		@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+
+
+
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+    </style>
+
+
+
+</head>
+
+<body>
+
+	<form action="/login" method="POST" >
+
+		<div class="login-form">
+      		<div class="col-md-10 col-xs-10">
+			  <img style="margin-bottom:5px;" class="img-responsive center-block" src="images/logoTicomp.png" />
+			</div>
+
+			<div class="col-md-12 col-xs-11 center-block">
+				<div class="form-group ">
+         			<input type="text" name="email" class="form-control" placeholder="email" id="email">
+         			<i class="fa fa-user"></i>
+     			</div>
+			</div>
+
+			<div class="col-md-12 col-xs-11 center-block">
+				<div class="form-group log-status">
+       				<input type="password" name="password" class="form-control" placeholder="contraseña" id="password">
+       				<i class="fa fa-lock"></i>
+     			</div>
+			</div>
+
+			<div class="col-md-12 col-xs-11 center-block">
+				<button type="submit" class="log-btn" >Ingresar</button>
+			</div>
+
+			</div>
+	</form>
+
+
+
+
+
+</body>
+</html>

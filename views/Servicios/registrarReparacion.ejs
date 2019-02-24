@@ -1,0 +1,179 @@
+git <script src="https://code.jquery.com/jquery-1.10.0.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/core/libraries/bootstrap.min.js"></script>
+<!-- Defailt scripts-->
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/pages/form_validation.js"></script>
+<script type="text/javascript" src="/js/plugins/notifications/sweet_alert.min.js"></script>
+
+
+
+<!-- CSS-->
+<link rel="stylesheet" type="text/css" href="/styles/overhang.min.css" />
+<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+
+<!--CRUDS -->
+<script type="text/javascript" src="/js/overhang.min.js"></script>
+<script type="text/javascript" src="/js/pdf/jspdf.debug.js"></script>
+<script type="text/javascript" src="/js/pdf/jspdf.min.js"></script>
+<script type="text/javascript" src="/js/pdf/addimage.js"></script>
+<script type="text/javascript" src="/js/pdf/png_support.js"></script>
+<script type="text/javascript" src="/js/pdf/png.js"></script>
+<script type="text/javascript" src="/js/pdf/zlib.js"></script>
+
+<script type="text/javascript" src="/js/pdf/jspdf.plugin.autotable.js"></script>
+<script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+<script src="/js/Servicios/MantenimientoPc.js"></script>
+<!-- 2 columns form -->
+<form class="form-horizontal form-validate-jquery" action="#" id="formPedido">
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h5 class="panel-title">REGISTRO DE SERVICIO DE MANTENIMIENTO O REPARACION</h5>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li>
+                        <a data-action="collapse"></a>
+                    </li>
+                    <li>
+                        <a data-action="reload"></a>
+                    </li>
+                    <li>
+                        <a data-action="close"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend class="text-semibold"><i class="icon-reading position-left"></i> DATOS DEL PORTATIL
+                        </legend>
+                        <div class="form-group col-md-5  has-feedback has-feedback-left">
+                            <label>Nombre del Cliente:</label>
+                            <input id="clientePedido" type="text" class="form-control  " placeholder="cliente">
+                            <div class="form-control-feedback">
+                                <i class="icon-user text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-5  has-feedback has-feedback-left">
+                            <label>Telefono:</label>
+                            <input id="telefonoCl" type="text" class="form-control" placeholder="951-111-1111">
+                            <div class="form-control-feedback">
+                                <i class="icon-phone-wave text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2" style="display: none;" id="div-mas">
+                            <a class="btn border-teal text-teal btn-flat btn-rounded btn-icon btn-xs valign-text-bottom" id="btn-mas"><i class="icon-plus3"></i></a>
+                        </div>
+                        <div class="form group col-md-2 verificaCl" id="verificarCliente">
+                            <button id="btn-verificarCli" type="submit" class="btn  btn-info">Verificar<i class="icon-arrow-right14 position-right"></i></button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group col-md-12" id="cabeceraReparacion" style="display: none;">
+                    <div class="form-group col-md-12">
+                        <div class="form-group col-md-1 centrarDiv"><label>Cant.</label></div>
+                        <div class="form-group col-md-4 centrarDiv"><label>Descripcion</label></div>
+                        <div class="form-group col-md-1 centrarDiv"><label>Marca</label></div>
+                        <div class="form-group col-md-2 centrarDiv"><label>Modelo</label></div>
+                        <div class="form-group col-md-1 centrarDiv"><label>Anticipo</label></div>
+                        <div class="form-group col-md-1 centrarDiv"><label>Precio</label></div>
+                    </div>
+
+                </div>
+                <div  id="contenedorFormMantenimiento" class="col-md-12">
+                </div>
+                <div  id="contenedorForm" class="col-lg-12">
+
+                </div>
+                <div class="form-group col-lg-12 " id="extraData"  style="display: none;">
+                    <div class="form-group col-lg-12">
+                        <div class="form-group col-lg-4">
+                            <p class="text-semibold"> Observaciones<textarea  id="observaciones"class="form-group col-md-4 input"  rows="2" cols="10">
+                                </textarea></p>
+                         </div>
+
+                        <div class="form-group col-lg-4">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <p class="text-semibold">Accesorios <textarea  id="accesorios" class="form-group col-lg-4 input" rows="2" cols="20">
+                            </textarea><p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" text-right form-group col-md-12">
+                <button id="btn-registarPedido" type="submit" class="btn  btn-success" style="display: none;">Registrar <i class="icon-arrow-right14 position-right"></i></button>
+            </div>
+
+        </div>
+
+        <div id="editarServicioMantenimiento" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-info">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h6 class="modal-title">Editar Reparacion</h6>
+                        <input id="id" style="display:none">
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-editar-Pedido" class="form-validate-jquery">
+                            <div class="col-md-12">
+                                <div class="form-group col-md-2 centrarDiv">
+                                    <label for="cantidadUpReparacion">Cant.</label>
+                                    <input id="cantidadUpReparacion" type="text" class="form-control maxlength-options" placeholder="">
+                                </div>
+                                <div class="form-group col-md-7 centrarDiv">
+                                    <label for="descripcionUpReparacion">Descripcion</label>
+                                    <input id="descripcionUpReparacion" type="text" name="apellidoP" class="form-control maxlength-options">
+                                </div>
+
+                                <div class="form-group col-md-2 centrarDiv">
+                                  <label for="marcaUpReparacion">Marca</label>
+                                  <input id="marcaUpReparacion" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+
+                              <div class="form-group col-md-3 centrarDiv">
+                                <label for="modeloUpReparacion">Modelo</label>
+                                <input id="modeloUpReparacion" type="text" name="apellidoM" class="form-control ">
+                              </div>
+                                <div class="form-group col-md-2 centrarDiv">
+                                    <label for="precioUpReparacion">Precio</label>
+                                    <input id="precioUpReparacion" type="text" class="form-control">
+                                </div>
+                                <div class="form-group col-md-2 centrarDiv">
+                                    <label for="anticipoUpReparacion">Anticipo</label>
+                                    <input id="anticipoUpReparacion" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div id="error" class="alert alert-danger alert-styled-left alert-bordered" style="display:none">
+                        <span class="text-semibold">Oh pps!</span> Ocurrio un Error
+                        <h4><a id="textoError" href="#" class="alert-link"> Verifica los datos</a></h4>.
+                    </div>
+
+                    <div class="modal-footer">
+                        <!-- <button id="closes" type="button" class="btn btn-link" data-dismiss="modal">Close</button> -->
+                        <form-group>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button id="btnActualizar-Servicio" type="button" class="btn btn-success " data-dismiss="modal">Actualizar</button>
+                        </form-group>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+<!-- /2 columns form -->

@@ -1,0 +1,171 @@
+
+
+<!-- Default scripts-->
+<script src="https://code.jquery.com/jquery-1.10.0.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/core/libraries/bootstrap.min.js"></script>
+<!-- Defailt scripts-->
+
+
+<script type="text/javascript" src="/js/pages/jqueryui_forms.js"></script>
+<script type="text/javascript" src="/js/core/libraries/jquery_ui/interactions.min.js"></script>
+<script type="text/javascript" src="/js/core/libraries/jquery_ui/widgets.min.js"></script>
+<script type="text/javascript" src="/js/core/libraries/jquery_ui/effects.min.js"></script>
+<script type="text/javascript" src="/js/plugins/extensions/mousewheel.min.js"></script>
+<script type="text/javascript" src="/js/core/libraries/jquery_ui/globalize/globalize.js"></script>
+<script type="text/javascript" src="/js/core/libraries/jquery_ui/globalize/cultures/globalize.culture.de-DE.js"></script>
+<script type="text/javascript" src="/js/core/libraries/jquery_ui/globalize/cultures/globalize.culture.ja-JP.js"></script>
+
+<script type="text/javascript" src="/js/plugins/forms/inputs/formatter.min.js"></script>
+<script type="text/javascript" src="/js/plugins/forms/inputs/maxlength.min.js"></script>
+
+<script type="text/javascript" src="/js/plugins/notifications/bootbox.min.js"></script>
+<script type="text/javascript" src="/js/plugins/notifications/sweet_alert.min.js"></script>
+<script type="text/javascript" src="/js/pages/components_modals.js"></script>
+
+
+
+<script src="/js/establecimiento/lista-establecimiento.js"></script>
+<script src="/js/crud/peticiones.js"></script>
+
+
+<div class="panel panel-flat">
+  <div class="panel-heading">
+    <h5 class="panel-title">Tabla de establecimientos</h5>
+    <div class="heading-elements">
+      <ul class="icons-list">
+                <li><a data-action="reload"></a></li>
+              </ul>
+            </div>
+  </div>
+
+  <div class="panel-body">
+  </div>
+
+  <table class="table datatable-generated">
+    <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Descripcion</th>
+                <th>Status</th>
+                <th>Usuario</th>
+            </tr>
+        </thead>
+  </table>
+</div>
+
+
+
+
+<div id="editarEstablecimiento" class="modal fade editar">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h6 class="modal-title">Editar Establecimiento</h6>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Simple form which will send a POST request -->
+        <form id="form-editar-establecimiento" class="form-validate-jquery">
+          <div class="content-group">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" class="form-control maxlength-options" maxlength="50" minLength="3" required="required" placeholder="">
+          </div>
+
+          <label for="domicilio">Domicilio:</label>
+            <div id="domicilio" class="form-group">
+              <div class="col-md-5">
+                <input id="calle" type="text" class="form-control maxlength-options" maxlength="50" minLength="3" required="required" placeholder="Calle">
+              </div>
+
+              <div class="col-md-2">
+                <input id="numero" type="text" class="form-control maxlength-options" maxlength="10" minLength="3" required="required" placeholder="Numero">
+              </div>
+
+              <div class="col-md-5">
+                <input id="colonia" type="text" class="form-control maxlength-options" maxlength="10" minLength="3" required="required" placeholder="Colonia">
+              </div>
+
+            </div>
+
+            <div class="form-group col-md-12">
+              <label>Celular: </label>
+              <input id="telefono" type="text" class="form-control format-phone-number" placeholder="Ingresa tu numero Celular" required="required">
+              <span class="help-block">(000)000-000-00-00</span>
+            </div>
+
+          <div class="form-group col-md-12">
+            <label for="horario">Horario de atención:</label>
+            <div id="horario">
+            <div class="col-md-6">
+              <label for="horaApertura">Apertura:</label>
+            <input id="horaApertura" class="form-control spinner-time" value="10" required="required" readonly>
+          </div>
+          <div class="col-md-6">
+              <label for="horaCierre">Cierre:</label>
+          <input id="horaCierre" class="form-control spinner-time" value="10" required="required" readonly>
+        </div>
+        </div>
+          </div>
+
+
+          <div class="form-group col-md-12">
+
+          <div id="ServicioD" class="col-md-6">
+            <label for="ServicioD">Servicio a domicilio:</label>
+            <div>
+            <input  id="servicioDomicilioSi" type="radio" name="radioservicioD" value="true" checked="true">SI<br>
+            <input  id="servicioDomicilioNo" type="radio" name="radioservicioD" value="false">NO<br>
+            </div>
+            </div>
+
+
+            <div id="horaServicioD" class="col-md-6">
+              <label for="horaServicioD">Hora de servicio a domicilio:</label>
+            <div class="col-md-6">
+            <label for="horaInicio">Hora de inicio:</label>
+            <input id="horaInicio" class="form-control spinner-time" value="10" readonly>
+            </div>
+            <div class="col-md-6">
+            <label for="horaFinal">Hora final:</label>
+            <input id="horaFinal" class="form-control spinner-time" value="10" readonly>
+            </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="compraMinima" class="col-md-6">Compra minima</label>
+            <label for="costoEnvio" class="col-md-6">Costo de envío</label>
+            <div class="col-md-6">
+              <input id="compraMinima" type="number" step="0.1" name="compraMinima" class="form-control" required="required">
+            </div>
+            <div class="col-md-6">
+              <input id="costoEnvio" type="number" step="0.1" name="costoEnvio" class="form-control" required="required">
+            </div>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="descripcion">Descripcion del establecimiento:</label>
+            <textarea rows="4" cols="50" id="descripcion" class="form-control maxlength-options" maxlength="200" minLength="3" required="required" placeholder=""></textarea>
+          </div>
+
+        </form>
+
+
+      </div>
+
+        <div id="error" class="col-md-12 alert alert-danger alert-styled-left alert-bordered" style="display:none">
+          <span class="text-semibold">Oh pps!</span> Ocurrio un Error <h4><a id="textoError" href="#" class="alert-link"> Verifica los datos</a></h4>.
+          </div>
+
+      <div class="modal-footer">
+        <div class="col-md-12">
+        <button id="closes" type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+        <button id="btnActualizar-establecimiento" type="button" class="btn btn-success ">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

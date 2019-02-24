@@ -1,0 +1,126 @@
+<script src="https://code.jquery.com/jquery-1.10.0.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/core/libraries/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/pages/form_validation.js"></script>
+<script type="text/javascript" src="/js/plugins/notifications/sweet_alert.min.js"></script>
+
+
+<!-- CSS-->
+<link rel="stylesheet" type="text/css" href="/styles/overhang.min.css" />
+<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+
+<!--CRUDS -->
+<script type="text/javascript" src="/js/overhang.min.js"></script>
+<script type="text/javascript" src="/js/pdf/jspdf.debug.js"></script>
+<script type="text/javascript" src="/js/pdf/jspdf.min.js"></script>
+<script type="text/javascript" src="/js/pdf/addimage.js"></script>
+<script type="text/javascript" src="/js/pdf/png_support.js"></script>
+<script type="text/javascript" src="/js/pdf/png.js"></script>
+<script type="text/javascript" src="/js/pdf/zlib.js"></script>
+<script type="text/javascript" src="/js/pdf/jspdf.plugin.autotable.js"></script>
+
+
+<script type="text/javascript" src="/js/plugins/ui/moment/moment.min.js"></script>
+<script type="text/javascript" src="/js/plugins/pickers/daterangepicker.js"></script>
+<script type="text/javascript" src="/js/plugins/pickers/anytime.min.js"></script>
+<script type="text/javascript" src="/js/plugins/pickers/pickadate/picker.js"></script>
+<script type="text/javascript" src="/js/plugins/pickers/pickadate/picker.date.js"></script>
+<script type="text/javascript" src="/js/plugins/pickers/pickadate/picker.time.js"></script>
+<script type="text/javascript" src="/js/plugins/pickers/pickadate/legacy.js"></script>
+
+<script type="text/javascript" src="/js/pages/picker_date.js"></script>
+<script src="/js/Garantias/registrarGarantia.js"></script>
+
+
+<!-- 2 columns form -->
+<form class="form-horizontal form-validate-jquery"  id="formGarantia">
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h5 class="panel-title">REGISTRO DE EQUPO PARA GARANTIA</h5>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li>
+                        <a data-action="collapse"></a>
+                    </li>
+                    <li>
+                        <a data-action="reload"></a>
+                    </li>
+                    <li>
+                        <a data-action="close"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-md-4">
+                                <label>Nombre del Cliente:</label>
+                                <input id="clienteG" type="text" class="form-control" placeholder="Nombre del cliente">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Apellidos :</label>
+                                <input id="apellidoC" type="text" class="form-control" placeholder="Apellido del cliente">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Telefono:</label>
+                              <input id="telefonoG" type="text" class="form-control format-phone-number" placeholder="Telefono">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-md-3">
+                                <label>Equipo:</label>
+                                <input id="equipoG" type="text" class="form-control" placeholder="Equipo">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Marca:</label>
+                                <input id="marcaG" type="text" class="form-control" placeholder="Marca">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Modelo:</label>
+                                <input id="modeloG" type="text" class="form-control" placeholder="Modelo">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>NUM-SERIE:</label>
+                                <input id="serieG" type="text" class="form-control" placeholder="Numero de serie">
+                            </div>
+                        </div>
+                        <div class=" form-group col-md-12">
+                          <div class="form-group col-md-4">
+                              <label>DESCRIPCION DE LA FALLA:</label>
+                              <input id="descripcionG" type="text" class="form-control" placeholder="Descripcion de la falla">
+                          </div>
+                            <div class="form-group col-md-4">
+                                <label>ACCESORIOS Y CABLES ADICIOONALES:</label>
+                                <input id="accesoriosG" type="text" class="form-control" placeholder="Accesorios adicionales">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label> FECHA ESTIMADA DE ENTREGA:</label><br>
+        											<input type="text" class="form-control daterange-single" value="">
+        										</div>
+                        </div>
+                        <div class="form-group  col-md-12">
+                          <div class="form-group col-md-4">
+                              <label>OBSERVACIONES:</label>
+                              <input id="observacionesG" type="text" class="form-control" placeholder="Observaciones">
+                          </div>
+                        </div>
+
+
+            </div>
+            <div class=" text-right  ">
+                <button id="btn-registrarG" type="submit" class="btn  btn-success">Registrar <i class="icon-arrow-right14 position-right"></i></button>
+            </div>
+        </div>
+
+
+
+    </div>
+</form>
+<!-- /2 columns form -->

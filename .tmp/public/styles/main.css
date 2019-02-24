@@ -1,0 +1,74 @@
+.verificaCl{
+  margin-top: 25px;
+  margin-left: 7px;
+}
+.btn-Action{
+  margin-left: 2px !important;
+  margin-top: 5px;
+}
+.centrarDiv{
+  text-align: justify;
+
+}
+td.details-control {
+  width: 40px; height: 40px;
+    background: url('../images/mas.png') no-repeat center center;
+     background-size: 25% 50%;
+    cursor: pointer;
+}
+tr.details td.details-control {
+    width: 40px; height: 40px;
+    background: url('../images/menos.png') no-repeat center center;
+     background-size: 25% 50%;
+    cursor: pointer;
+
+}
+.indiceEquipo-li{
+  color: white;
+  font-size: 16px;
+  background-color: #00CCCC;
+
+
+}
+/*tr td .equipos-li .equipoDescripcion{
+  width: 100%;
+  background: blue;
+}*/
+.contenido-equipo{
+background-color: #CCFFE5;
+  color:black;
+  font-size: 12px;
+  height: 40px;
+  text-align: justify;
+}
+.input {
+border:0;
+padding:10px;
+font-size:1em;
+color:black;
+border:solid 1px #ccc;
+margin:0 0 20px;
+width:300px;
+-moz-box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+
+}
+input:focus {
+    outline: none !important;
+    border:1px solid blue;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+textarea:focus {
+        outline: none !important;
+    border:1px solid blue;
+    box-shadow: 0 0 10px #719ECE;
+}
+/*#logo-menu
+{
+  background: white;
+}*/

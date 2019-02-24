@@ -1,0 +1,115 @@
+<!-- Default scripts-->
+<script src="https://code.jquery.com/jquery-1.10.0.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/core/libraries/bootstrap.min.js"></script>
+<script src="/js/usuario/agregar-usuario.js"></script>
+<script type="text/javascript" src="/js/pages/form_validation.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/styles/overhang.min.css" />
+<script type="text/javascript" src="/js/overhang.min.js"></script>
+
+
+<!-- Defailt scripts-->
+<!-- 2 columns form -->
+<form class="form-horizontal form-validate-jquery " id="registroUsuario">
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h5 class="panel-title">REGISTRO DE USUARIO</h5>
+            <div class="heading-elements">
+                <ul class="icons-list">
+                    <li>
+                        <a data-action="collapse"></a>
+                    </li>
+                    <li>
+                        <a data-action="reload"></a>
+                    </li>
+                    <li>
+                        <a data-action="close"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend class="text-semibold"><i class="icon-reading position-left"></i> DATOS PERSONALES</legend>
+                        <div class="alerta-succes" style='display:none;'>
+                            <div class="alert alert-success alert-styled-left alert-arrow-left alert-bordered">
+                                <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                <span class="text-semibold">MUY BIEN!</span> DATOS REGISTRADOS </span>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-md-6">
+
+                                <label>Nombre:</label>
+                                <input id="nombre-user" type="text" class="form-control" placeholder="Nombre">
+
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label>Apelildo PATERNO:</label>
+                                <input id="apaterno" type="text" class="form-control" placeholder="Apellido Paterno">
+
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Apelildo Materno:</label>
+                                <input id="amaterno" type="text" class="form-control" placeholder="Apellido Materno">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-md-4">
+                                <label>Telefono:</label>
+                                <input id="telefono" type="text" class="form-control format-phone-number" placeholder="(044)054-131-3423">
+                            </div>
+
+                            <!-- Email field -->
+                            <div class="form-group col-md-4">
+                                <label class="control-label ">Email  <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control" id="email" required="required" placeholder="Enter a valid email address">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="control-label">Repita su email <span class="text-danger">*</span></label>
+                                <input type="email" name="repeat_email" class="form-control" required="required" placeholder="Enter a valid email address">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="form-group col-md-4">
+                                <label class="control-label ">Password <span class="text-danger">*</span></label>
+                                <input type="password" name="password" id="password" class="form-control" required="required" placeholder="Minimo 6 caracteres">
+
+                            </div>
+
+
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label ">Repita su  password <span class="text-danger">*</span></label>
+                                <input type="password" name="repeat_password" class="form-control" required="required" placeholder="repita su password">
+                            </div>
+
+
+                            <div class="form-group col-md-4">
+                                <label>Sucursal:</label>
+                                <select id="sucursal" data-placeholder="Selecciona la sucursal" class="select">
+                              <option></option>
+                                <option value="PUERTO ESCONDIDO">PUERTO ESCONDIDO</option>
+                                <option value="NOPALA">NOPALA</option>
+                                <option value="MATRIZ OAXACA">MATRIZ OAXACA</option>
+            </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+            </div>
+
+            <div class="text-right">
+                <button id="btn-registarUser" type="submit" class="btn btn-primary">Registrar <i class="icon-arrow-right14 position-right"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- /2 columns form -->

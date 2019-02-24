@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        #map {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        <%=typeof title == 'undefined' ? 'TICOMP' : title%>
+    </title>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.0.min.js" charset="utf-8"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script> -->
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="./styles/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="./styles/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./styles/core.css" rel="stylesheet" type="text/css">
+    <link href="./styles/components.css" rel="stylesheet" type="text/css">
+    <link href="./styles/colors.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./styles/font-awesome.min.css">
+
+    <!-- /global stylesheets -->
+</head>
+
+<!-- Main navbar -->
+<div class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/admin"><img src="./images/logoTicomp.png" alt=""></a>
+
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-mobile">
+
+
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class=" dropdown-user">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <img src="./images/users.png" alt="">
+            <span><%= session.usuario.nombre%></span>
+              <i class="caret"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#"><i class="icon-user-plus"></i>Mi Perfil</a></li>
+              <li class="divider"></li>
+              <li><a href="/logout"><i class="icon-switch2"></i> Cerrar Sesion</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-main">
+            <div class="sidebar-content">
+
+                <!-- User menu -->
+                <div class="sidebar-user">
+                    <div class="category-content">
+                        <div class="media">
+                            <div class="media-body">
+                                <!-- <span class="media-heading text-semibold" id="usuario-menu"></span> -->
+                                <span><%= session.usuario.nombre %></span>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /user menu -->
+
+
+                <!-- Main navigation -->
+                <div class="sidebar-category sidebar-category-visible">
+                    <div class="category-content no-padding">
+                        <ul class="navigation navigation-main navigation-accordion">
+                            <!-- /*
+                    ███    ███ ███████ ███    ██ ██    ██
+                    ████  ████ ██      ████   ██ ██    ██
+                    ██ ████ ██ █████   ██ ██  ██ ██    ██
+                    ██  ██  ██ ██      ██  ██ ██ ██    ██
+                    ██      ██ ███████ ██   ████  ██████
+                    */ -->
+
+                            <!-- Main -->
+                            <li class="navigation-header"><span>Menu</span> <i class="icon-menu" title="Main pages"></i></li>
+
+                            <li>
+                                <a href="#"><i class="icon-users"></i> <span>Usuarios</span></a>
+                                <ul>
+                                    <li><a href="/registrar-usuario">REGISTRAR USUARIOS</a></li>
+
+                                    <li><a href='/lista-usuarios'>LISTAR USUARIOS</a></li>
+                                    <li class="navigation-divider"></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/registrarCliente"><i class="icon-users4"></i> <span>Registrar Cliente</span></a>
+
+                            </li>
+                            <li>
+                                <a href="/listaReparaciones"><i class="icon-eye"></i> <span>Reparacion/Mantenimiento</span></a>
+
+                            </li>
+                            <li>
+                              <a href="/listarPedidos"><i class="icon-eye"></i> <span>Pedidos</span></a>
+
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-wrench3"></i> <span>Garantias</span></a>
+                                <ul>
+
+                                    <li><a href="/registrarGarantia">Registrar Garantia</a></li>
+                                    <li><a href="/listarGarantia">Listar Garantia</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-database"></i> <span>Historial</span></a>
+                                <ul>
+                                    <li><a href="/historicoP">Pedidos</a></li>
+
+                                    <li><a href='/viewEntregados'>Servicios</a></li>
+                                    <li><a href='/listarHistorico'>Garantias</a></li>
+                                    <li class="navigation-divider"></li>
+                                </ul>
+                            </li>
+                            <!-- /page kits -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- /main navigation -->
+            </div>
+        </div>
+        <!-- /main sidebar -->
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Content area -->
+            <div class="content">
+
+                <!-- Main charts -->
+                <div class="row">
+                    <!-- <div class="col-lg-7"> -->
+
+
+                    <%- body %>
